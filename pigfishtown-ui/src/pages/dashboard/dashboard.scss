@@ -1,0 +1,19 @@
+.dashboard-wrapper {
+  .button-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  
+    .pft-button-wrapper {
+      margin: .5rem;
+      height: 6rem;
+      width: 6rem;
+      border-radius: 1.5rem;
+    }
+  
+    .pft-button {
+      font-size: 1rem;
+    }
+  }
+}

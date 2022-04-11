@@ -1,0 +1,30 @@
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 9vh;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+
+  .pft-button-wrapper {
+    height: 100%;
+    width: 25%;
+    max-width: 15rem;
+
+    .pft-button {
+      border-radius: 0;
+      border: none;
+      font-size: 1rem;
+    }
+  }
+
+  label {
+    margin-right: 1rem;
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}

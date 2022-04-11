@@ -1,0 +1,42 @@
+.pft-draggable-container-wrapper {
+  width: 100%;
+  border: 2px solid rgb(75, 75, 75);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: inherit;
+
+  .header-row {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgb(216, 214, 214);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .header-label {
+      cursor: pointer;
+    }
+
+    .delete-icon {
+      margin-left: auto;
+      cursor: pointer;
+    }
+  }
+
+  .item-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 3.5rem;
+    background-color: inherit;
+  }
+
+  .pft-draggable-item-wrapper {
+    margin: .5rem;
+  }
+}

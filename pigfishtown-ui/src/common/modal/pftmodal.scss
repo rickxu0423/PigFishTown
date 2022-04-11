@@ -1,0 +1,86 @@
+.pft-modal-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba($color: #000000, $alpha: 0.35);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pft-modal {
+  width: 50vw;
+  height: auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+
+  .modal-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .modal-message {
+      margin-bottom: .5rem;
+    }
+
+    .number-label {
+      margin-top: .5rem;
+    }
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 2rem 0;
+  padding-bottom: 0;
+
+  button {
+    padding: 0.5rem;
+    border-radius: 8px;
+  }
+  .cancel {
+    background-color: transparent;
+    font-weight: 600;
+
+    &:hover {
+      color: rgba(54, 67, 72, 0.8);
+    }
+  }
+  .confirm {
+    background-color: #364348;
+    color: #fff;
+
+    &:hover {
+      background-color: rgba(54, 67, 72, 0.8);
+    }
+  }
+}
+
+.number-controller {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  margin-top: 1rem;
+  .pft-button-wrapper {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 1rem;
+    .pft-button {
+      border: unset;
+      border-radius: 5px;
+    }
+  }
+}

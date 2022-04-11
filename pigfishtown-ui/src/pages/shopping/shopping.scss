@@ -1,0 +1,41 @@
+.shopping-wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: inherit;
+
+  .shop-list {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: inherit;
+
+    .pft-draggable-container-wrapper {
+      margin: 1rem 0;
+
+      .headerAfterLabelSlot,
+      .afterItemsSlot {
+        margin-left: .5rem;
+
+        .pft-button-wrapper {
+          height: 1.5rem;
+          width: 1.5rem;
+
+          .pft-button {
+            border: 1px solid rgb(108, 108, 108);
+          }
+        }
+      }
+    }
+
+    .add-shop-button.pft-button-wrapper  {
+      margin-top: .5rem;
+      width: 10rem;
+
+      .pft-button {
+        border: 1px solid rgb(108, 108, 108);
+      }
+    }
+  }
+}
