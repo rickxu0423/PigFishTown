@@ -1,0 +1,33 @@
+.notify-wrapper {
+  position: fixed;
+  width: 50%;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+.notify-content {
+  display: grid;
+  grid-template-columns: 30px auto;
+  align-items: center;
+  background-color: white;
+  animation: fadeInExpand 150ms;
+  margin: 15px 0 0 0;
+  padding: 16px 15px;
+  border-radius: 16px;
+  font-size: 15px;
+  box-shadow: 0 20px 30px 0 #aaaaaa, 0 0 10px 0 #aaaaaa;
+}
+
+.notify-content p {
+  font-weight: 600;
+  margin: 0;
+  word-break: break-word;
+  color: #363636;
+}
+
+.notify-content svg {
+  width: 20px;
+  height: 20px;
+}

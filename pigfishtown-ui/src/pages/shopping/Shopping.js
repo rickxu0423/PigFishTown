@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd'
+import './shopping.scss'
+import initialData from './initial-data'
 
 import PftDraggableContainer from 'src/common/draggablecontainer/PftDraggableContainer'
 import PftModal from 'src/common/modal/PftModal'
 import PftButton from 'src/common/button/PftButton'
-import './shopping.scss'
-import initialData from './initial-data'
+import { notify } from 'src/common/notify/PftNotify'
 
 function Shopping () {
-
   const [items, setItems] = useState(initialData.items)
   const [shops, setShops] = useState(initialData.shops)
   const [shopOrder, setShopOrder] = useState(initialData.shopOrder)
@@ -34,7 +34,7 @@ function Shopping () {
   const onDeleteShop = (shop) => {
     const modalCase = 'delete-shop'
     const message = `Confirm to delete ${shop.label}`
-    const newItem = { modalCase, id: shop.id, message }
+    const newItem = { modalCase, id: shop.id, fakeLabel: shop.label, message }
     setShowModal(true)
     setModalData(newItem)
   }
@@ -71,10 +71,12 @@ function Shopping () {
       const newShopOrder = [...shopOrder]
       newShopOrder.push(id)
       setShopOrder(newShopOrder)
+      notify({ message: `Sucessfully add ${item.label}`})
     } else if (modalCase === 'edit-shop') {
       const newShops = { ...shops }
       newShops[id].label = item.label
       setShops(newShops)
+      notify({ message: `Sucessfully edit ${item.label}`})
     } else if (modalCase === 'delete-shop') {
       const newShops = { ...shops }
       const newItems = { ...items }
@@ -87,6 +89,7 @@ function Shopping () {
       setShops(newShops)
       const newShopOrder = [...shopOrder].filter(id => id !== item.id)
       setShopOrder(newShopOrder)
+      notify({ message: `Sucessfully delete ${item.fakeLabel}`})
     } else if (modalCase === 'add-item') {
       delete item.modalCase
       delete item.shopId
