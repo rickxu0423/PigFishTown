@@ -8,7 +8,6 @@ function PftNotify (props) {
   const [notify, setNotify] = useState([])
 
   const notifyHandler = useCallback(({ detail }) => {
-    console.log(detail)
     setNotify(prevNotify => [...prevNotify, detail])
     setTimeout(() => {
       setNotify(prevNotify => prevNotify.slice(1, prevNotify.length))
